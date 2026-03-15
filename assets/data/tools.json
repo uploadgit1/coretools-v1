@@ -1,0 +1,142 @@
+{
+  "tools": [
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "vendor": "Anthropic",
+      "category": "Chat & Research",
+      "shortDescription": "AI assistant built for thoughtful work — writing, analysis, coding, research, and long-document tasks across teams.",
+      "bestFor": "Teams that need a reliable general-purpose AI assistant with strong reasoning, long context windows, and enterprise-grade privacy controls.",
+      "tags": ["assistant", "enterprise"],
+      "officialLinks": {
+        "website": "https://claude.ai",
+        "docs": "https://docs.anthropic.com",
+        "blog": "https://www.anthropic.com/news",
+        "youtube": "https://www.youtube.com/@anthropic-ai",
+        "linkedin": "https://www.linkedin.com/company/anthropicresearch",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/claude/1.png", "alt": "Claude conversation interface" },
+        { "src": "assets/images/tools/claude/2.png", "alt": "Claude enterprise dashboard" }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Accenture", "url": "" },
+        { "name": "Bridgewater", "url": "" },
+        { "name": "GitLab", "url": "https://about.gitlab.com/gitlab-duo/" },
+        { "name": "Notion", "url": "" }
+      ],
+      "useCases": [
+        "Research and summarisation",
+        "Document drafting and editing",
+        "Data analysis and reasoning",
+        "Code review and generation"
+      ],
+      "notes": "Claude Enterprise includes SSO, admin controls, and a commitment that customer data is not used for model training. SOC 2 Type II and ISO 27001 certified.",
+      "lastUpdated": "2026-03-15"
+    },
+    {
+      "slug": "claude-code",
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "category": "Developer & Coding",
+      "shortDescription": "Agentic coding tool that runs in the terminal. Handles multi-file edits, debugging, refactors, and build tasks across full codebases.",
+      "bestFor": "Development teams that want an AI agent embedded directly in their workflow — not just autocomplete, but autonomous multi-step coding tasks.",
+      "tags": ["developer", "agent"],
+      "officialLinks": {
+        "website": "https://claude.ai/code",
+        "docs": "https://code.claude.com/docs",
+        "blog": "https://www.anthropic.com/news",
+        "youtube": "",
+        "linkedin": "",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/claude-code/1.png", "alt": "Claude Code running in a terminal session" },
+        { "src": "assets/images/tools/claude-code/2.png", "alt": "Claude Code performing a multi-file edit" }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Accenture", "url": "" },
+        { "name": "Anthropic (internal)", "url": "" }
+      ],
+      "useCases": [
+        "Multi-file code refactoring",
+        "Debugging and test generation",
+        "Build and deployment automation",
+        "Codebase exploration and documentation"
+      ],
+      "notes": "Announced February 2025 alongside Claude 3.7 Sonnet. Relatively new but already deployed at scale in enterprise environments.",
+      "lastUpdated": "2026-03-15"
+    },
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "vendor": "Midjourney Inc.",
+      "category": "Image & Design",
+      "shortDescription": "AI image generation platform used for creative concepts, branding assets, marketing visuals, and rapid visual prototyping.",
+      "bestFor": "Creative and marketing teams that need high-quality generated imagery for concepts, campaigns, and visual exploration.",
+      "tags": ["creative", "image generation"],
+      "officialLinks": {
+        "website": "https://www.midjourney.com",
+        "docs": "https://docs.midjourney.com",
+        "blog": "",
+        "youtube": "",
+        "linkedin": "",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/midjourney/1.png", "alt": "Midjourney image generation interface" },
+        { "src": "assets/images/tools/midjourney/2.png", "alt": "Midjourney gallery view of generated images" }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Widely adopted by marketing agencies", "url": "" },
+        { "name": "Used in Fortune 500 creative teams", "url": "" }
+      ],
+      "useCases": [
+        "Concept art and visual exploration",
+        "Marketing and social media visuals",
+        "Brand asset prototyping",
+        "Presentation imagery"
+      ],
+      "notes": "Commercial use is permitted on paid plans but subject to Midjourney's terms. Ongoing copyright litigation is worth flagging for risk-conscious organisations. Corporate billing is available for 50+ users on yearly Pro/Mega plans.",
+      "lastUpdated": "2026-03-15"
+    },
+    {
+      "slug": "harvey",
+      "name": "Harvey",
+      "vendor": "Harvey AI",
+      "category": "Legal & Compliance",
+      "shortDescription": "AI platform purpose-built for legal and professional services — research, due diligence, contract analysis, and document review.",
+      "bestFor": "Law firms and in-house legal teams that need AI trained on legal workflows, not a general chatbot adapted for legal use.",
+      "tags": ["legal", "professional services"],
+      "officialLinks": {
+        "website": "https://www.harvey.ai",
+        "docs": "",
+        "blog": "https://www.harvey.ai/blog",
+        "youtube": "",
+        "linkedin": "https://www.linkedin.com/company/harvey-ai",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/harvey/1.png", "alt": "Harvey AI legal research interface" },
+        { "src": "assets/images/tools/harvey/2.png", "alt": "Harvey AI contract analysis workflow" }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "A&O Shearman", "url": "https://www.harvey.ai/customers" },
+        { "name": "100,000+ lawyers across 1,000+ organisations", "url": "https://www.harvey.ai/customers" }
+      ],
+      "useCases": [
+        "Legal research",
+        "Due diligence",
+        "Contract analysis and review",
+        "Document drafting"
+      ],
+      "notes": "Harvey is purpose-built for legal — not a general AI assistant with a legal plugin. Strong traction with major global law firms.",
+      "lastUpdated": "2026-03-15"
+    }
+  ]
+}
