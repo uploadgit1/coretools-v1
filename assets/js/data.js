@@ -1,4 +1,21 @@
-{
+// ============================================================
+// data.js — Core Tools content
+//
+// This file is the single source of truth for all tool data.
+// Edit this file to add, update, or remove tools.
+//
+// To add a new tool:
+//   1. Copy an existing tool block below
+//   2. Fill in all the fields
+//   3. Add screenshots to assets/images/tools/{slug}/
+//   4. Save this file — changes appear immediately on next push
+//
+// This is a plain JavaScript file (not JSON) so it loads
+// directly in the browser without needing a server. The data
+// is assigned to window.TOOLS_DATA and read by app.js.
+// ============================================================
+
+window.TOOLS_DATA = {
   "tools": [
     {
       "slug": "claude",
@@ -59,8 +76,12 @@
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/claude-code/1.png", "alt": "Claude Code running in a terminal session" },
-        { "src": "assets/images/tools/claude-code/2.png", "alt": "Claude Code performing a multi-file edit" }
+        { "src": "assets/images/tools/claude-code/claude-code-local-remote-repo-analysis.jpg",  "alt": "Claude Code repo analysis",           "caption": "Claude Code side-by-side Local terminal and Remote web UI both analysing the same repository." },
+        { "src": "assets/images/tools/claude-code/claude-code-desktop-new-session-prompt.png",  "alt": "Claude Code new session",            "caption": "Claude Code desktop app (Code tab) on a blank new session with a prompt ready to enter." },
+        { "src": "assets/images/tools/claude-code/claude-code-vscode-extension-unit-tests.png", "alt": "Claude Code writing unit tests",      "caption": "Claude Code VS Code extension writing unit tests for a localisation file inside a project." },
+        { "src": "assets/images/tools/claude-code/claude-code-chat-landing-page-preview.png",   "alt": "Claude Code building a landing page", "caption": "Claude Code chat building an HTML landing page with a live preview alongside." },
+        { "src": "assets/images/tools/claude-code/claude-code-anywhere-terminal-ide-web.png",   "alt": "Claude Code access modes",            "caption": "Claude Code marketing page showcasing the three access modes: Terminal, IDE extension, and Web." },
+        { "src": "assets/images/tools/claude-code/claude-code-desktop-file-write-permission.png","alt": "Claude Code permission prompt",       "caption": "Claude Code requesting permission to write a file — showing how it checks before making changes." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -93,8 +114,12 @@
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/midjourney/1.png", "alt": "Midjourney image generation interface" },
-        { "src": "assets/images/tools/midjourney/2.png", "alt": "Midjourney gallery view of generated images" }
+        { "src": "assets/images/tools/midjourney/midjourney-create-image-actions-menu.webp",              "alt": "Midjourney Create tab with image actions",  "caption": "Midjourney Create tab showing a generated image with the full context menu and Creation Actions panel (Vary, Upscale, Animate) open." },
+        { "src": "assets/images/tools/midjourney/midjourney-explore-top-day-community-grid.webp",         "alt": "Midjourney Explore community feed",         "caption": "Midjourney Explore tab showing the Top Day community image feed in a masonry grid, viewed before subscribing." },
+        { "src": "assets/images/tools/midjourney/midjourney-explore-childrens-book-illustration-batch.webp","alt": "Midjourney batch illustration results",    "caption": "Midjourney Explore tab displaying a batch of AI-generated doodle-style children's book wizard illustrations with their prompts." },
+        { "src": "assets/images/tools/midjourney/midjourney-explore-tab-ui-annotated.webp",               "alt": "Midjourney Explore tab annotated",          "caption": "Midjourney Explore tab with annotation boxes highlighting the feed filters, search bar, and Styles/Images/Videos toggles." },
+        { "src": "assets/images/tools/midjourney/midjourney-explore-image-detail-download-menu.webp",     "alt": "Midjourney image detail and download menu", "caption": "Midjourney Explore tab with a single image expanded showing the Copy/Report/Download context menu." },
+        { "src": "assets/images/tools/midjourney/midjourney-subscription-plans-pricing.webp",             "alt": "Midjourney subscription pricing",           "caption": "Midjourney subscription pricing page comparing Basic ($10), Standard ($30), Pro ($60), and Mega ($120) monthly plans." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -127,8 +152,13 @@
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/harvey/1.png", "alt": "Harvey AI legal research interface" },
-        { "src": "assets/images/tools/harvey/2.png", "alt": "Harvey AI contract analysis workflow" }
+        { "src": "assets/images/tools/harvey/harvey-contract-review-table.png",  "alt": "Harvey bulk contract review",         "caption": "Harvey's bulk contract review interface displaying force majeure and assignment provision analysis across 20+ documents." },
+        { "src": "assets/images/tools/harvey/harvey-draft-legal-memo.png",       "alt": "Harvey drafting a legal memo",        "caption": "Harvey assistant drafting a legal defence memo for a securities trading platform infringement case." },
+        { "src": "assets/images/tools/harvey/harvey-assistant-template-library.png","alt": "Harvey template library",          "caption": "Harvey's Assistant template library listing pre-built workflows across General, Transactional, Litigation, and Financial Services." },
+        { "src": "assets/images/tools/harvey/harvey-m365-copilot-investor-rights.png","alt": "Harvey in Microsoft 365 Copilot", "caption": "Harvey integrated into Microsoft 365 Copilot, answering a query about investor observer rights on an Advisory Committee." },
+        { "src": "assets/images/tools/harvey/harvey-eu-law-wage-analysis.png",   "alt": "Harvey EU employment law analysis",  "caption": "Harvey analysing EU employment law regarding permissible bonus and wage deductions against an uploaded employment agreement." },
+        { "src": "assets/images/tools/harvey/harvey-nda-comparison-drafting.png","alt": "Harvey NDA comparison and drafting",  "caption": "Harvey comparing a Cogent–3M NDA against a checklist and generating a table of drafting suggestions." },
+        { "src": "assets/images/tools/harvey/harvey-website-homepage.png",       "alt": "Harvey marketing homepage",          "caption": "Harvey's marketing homepage showcasing the Practice Made Perfect tagline and law firm client logos." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -145,4 +175,4 @@
       "lastUpdated": "2026-03-15"
     }
   ]
-}
+};

@@ -3,12 +3,9 @@
 //          search, and view switching
 // ============================================================
 //
-// NOTE: This site uses fetch() to load tools.json.
-// Opening index.html directly as a local file (file://) will
-// block fetch due to browser security. To test locally, use:
-//   python3 -m http.server 8000
-// then visit: http://localhost:8000
-// Or just push to GitHub Pages and test there.
+// Data is loaded from assets/js/data.js, which assigns all
+// tool content to window.TOOLS_DATA. This works locally
+// (file://) and on GitHub Pages without any code changes.
 // ============================================================
 
 let allTools = [];
@@ -19,12 +16,12 @@ let savedScrollY = 0;
 // ============================================================
 // INIT — load data and set up the page
 // ============================================================
-async function init() {
+function init() {
   try {
-    const res = await fetch('assets/data/tools.json');
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-    const data = await res.json();
-    allTools = data.tools;
+    if (!window.TOOLS_DATA || !window.TOOLS_DATA.tools) {
+      throw new Error('TOOLS_DATA not found — check that data.js loaded correctly.');
+    }
+    allTools = window.TOOLS_DATA.tools;
 
     renderCategoryPills();
     applyFilters();
@@ -41,7 +38,7 @@ async function init() {
     checkHashOnLoad();
 
   } catch (err) {
-    console.error('Could not load tools.json:', err);
+    console.error('Could not load tools:', err);
     document.getElementById('card-grid').innerHTML =
       '<p style="color:#888; padding:2rem 0;">Could not load tools. Check the console for details.</p>';
   }

@@ -130,28 +130,42 @@ function renderGallery(screenshots) {
   document.getElementById('gallery-prev').onclick = galleryPrev;
   document.getElementById('gallery-next').onclick = galleryNext;
 
+  // Clicking the image opens the lightbox
+  document.getElementById('gallery-img').onclick = () => {
+    const current = galleryScreenshots[galleryIndex];
+    openLightbox(current.src, current.alt || '');
+  };
+
   updateGalleryDisplay();
 }
 
 function updateGalleryDisplay() {
-  const img = document.getElementById('gallery-img');
-  const counter = document.getElementById('gallery-counter');
-  const prevBtn = document.getElementById('gallery-prev');
-  const nextBtn = document.getElementById('gallery-next');
+  const img          = document.getElementById('gallery-img');
+  const counterLeft  = document.getElementById('gallery-counter-left');
+  const counterRight = document.getElementById('gallery-counter-right');
+  const caption      = document.getElementById('gallery-caption');
+  const prevBtn      = document.getElementById('gallery-prev');
+  const nextBtn      = document.getElementById('gallery-next');
 
   const current = galleryScreenshots[galleryIndex];
   img.src = current.src;
   img.alt = current.alt || '';
 
-  const total = galleryScreenshots.length;
-  counter.textContent = total > 1 ? `${galleryIndex + 1} / ${total}` : '';
+  const total       = galleryScreenshots.length;
+  const counterText = total > 1 ? `${galleryIndex + 1} / ${total}` : '';
+  counterLeft.textContent  = counterText;
+  counterRight.textContent = counterText;
+  caption.textContent = current.caption || '';
 
   prevBtn.disabled = galleryIndex === 0;
   nextBtn.disabled = galleryIndex === total - 1;
 
-  // Hide prev/next buttons if only one image
-  prevBtn.style.visibility = total > 1 ? 'visible' : 'hidden';
-  nextBtn.style.visibility = total > 1 ? 'visible' : 'hidden';
+  // Hide arrows and counters if only one image
+  const vis = total > 1 ? 'visible' : 'hidden';
+  prevBtn.style.visibility       = vis;
+  nextBtn.style.visibility       = vis;
+  counterLeft.style.visibility   = vis;
+  counterRight.style.visibility  = vis;
 }
 
 function galleryPrev() {
@@ -232,3 +246,44 @@ function renderNotes(notes) {
   section.classList.remove('hidden');
   document.getElementById('notes-block').textContent = notes;
 }
+
+// ============================================================
+// LIGHTBOX — open, close, keyboard + click-outside
+// ============================================================
+function openLightbox(src, alt) {
+  const lightbox = document.getElementById('lightbox');
+  const img      = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt;
+  lightbox.classList.remove('hidden');
+  document.body.style.overflow = 'hidden'; // prevent background scroll
+  // Move focus to the close button for keyboard users
+  document.getElementById('lightbox-close').focus();
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.add('hidden');
+  document.getElementById('lightbox-img').src = '';
+  document.body.style.overflow = '';
+}
+
+// Close button
+document.getElementById('lightbox-close').onclick = closeLightbox;
+
+// Click on the dark overlay (but not on the image) closes the lightbox
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('lightbox')) {
+    closeLightbox();
+  }
+});
+
+// Escape key closes the lightbox
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox.classList.contains('hidden')) {
+      closeLightbox();
+    }
+  }
+});

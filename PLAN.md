@@ -61,17 +61,23 @@ coretools-v1/
     images/
       tools/
         claude/
-          1.png
-          2.png
+          home-new-chat.png
+          web-projects-home.png
+          web-conversation-light.jpg
+          web-research-results.png
+          ... (filenames preserved as captured — see meta.json)
         claude-code/
-          1.png
-          2.png
+          claude-code-desktop-new-session-prompt.png
+          claude-code-vscode-extension-unit-tests.png
+          ... (filenames preserved as captured — see meta.json)
         midjourney/
-          1.png
-          2.png
+          midjourney-explore-top-day-community-grid.webp
+          midjourney-create-image-actions-menu.webp
+          ... (filenames preserved as captured — see meta.json)
         harvey/
-          1.png
-          2.png
+          harvey-contract-review-table.png
+          harvey-draft-legal-memo.png
+          ... (filenames preserved as captured — see meta.json)
       favicon.png         ← simple browser tab icon
   .nojekyll               ← prevents Jekyll processing on GitHub Pages
   PLAN.md                 ← this file
@@ -105,8 +111,16 @@ Each tool in `tools.json` is an object in an array. The schema is designed to be
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/claude/1.png", "alt": "Claude conversation interface" },
-        { "src": "assets/images/tools/claude/2.png", "alt": "Claude enterprise dashboard" }
+        {
+          "src": "assets/images/tools/claude/home-new-chat.png",
+          "alt": "Claude desktop home screen",
+          "caption": "Claude's desktop app home screen with personalised greeting, model selector, and quick-start prompt categories."
+        },
+        {
+          "src": "assets/images/tools/claude/web-research-results.png",
+          "alt": "Claude Research results",
+          "caption": "Completed research output with a detailed side panel citing 457 sources."
+        }
       ],
       "videoEmbedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID",
       "whoUsesIt": [
@@ -138,7 +152,7 @@ Each tool in `tools.json` is an object in an array. The schema is designed to be
 | bestFor | Yes | string | One clear sentence starting with who it suits |
 | tags | No | array of strings | 0-3 lightweight tags, used sparingly |
 | officialLinks | Yes | object | Empty string for links that don't exist yet |
-| screenshots | Yes | array of objects | Each has `src` (relative path) and `alt` (description) |
+| screenshots | Yes | array of objects | Each has `src` (relative path), `alt` (description), and `caption` (one-line label shown below gallery) |
 | videoEmbedUrl | No | string | YouTube privacy-enhanced embed URL, empty if none |
 | whoUsesIt | Yes | array of objects | Each has `name` and optional `url` for evidence |
 | useCases | No | array of strings | Short practical phrases |
@@ -151,6 +165,8 @@ Each tool in `tools.json` is an object in an array. The schema is designed to be
 - `officialLinks` uses empty strings rather than omitting keys — this makes it simple to fill in later without changing code.
 - `whoUsesIt` entries with an empty `url` render as plain text; entries with a URL render as a link. No code changes needed either way.
 - `alt` on screenshots means accessibility is built in from day one.
+- `caption` provides a one-line description shown below the gallery image — sourced from the tool's `meta.json` file.
+- **Screenshot filenames are preserved exactly as captured** (descriptive kebab-case). The first screenshot in the array is used as the card thumbnail. Each tool folder includes a `meta.json` listing filename, alt, and caption for reference.
 
 ---
 
@@ -217,7 +233,8 @@ Clicking anywhere on the card triggers the view switch to the tool detail view.
    - Image counter: "1 / 2"
    - Keyboard accessible (left/right arrow keys)
    - Architected to handle 2-10+ images without code changes (reads from the screenshots array)
-   - Clicking an image could later open a lightbox, but not needed for v1
+   - Clicking an image opens a full-screen lightbox (built in v1)
+   - Lightbox closes via ✕ button, click-outside, or Escape key
 
 6. **Video embed** — Below the gallery, full width. YouTube privacy-enhanced embed (`youtube-nocookie.com`). Only rendered if `videoEmbedUrl` is not empty. Clean aspect ratio container (16:9).
 
@@ -423,7 +440,7 @@ The build is broken into safe, small steps. Each step produces something visible
 - Sort options (alphabetical, recently updated)
 - "Featured tools" section on homepage
 - Saved favourites (localStorage)
-- Lightbox for screenshot zoom
+- ~~Lightbox for screenshot zoom~~ *(built in v1)*
 - Related tools suggestions
 - Risk/governance badges
 - More advanced tag filtering
@@ -518,8 +535,8 @@ A static directory site for curated enterprise tools. Hosted on GitHub Pages.
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/claude/1.png", "alt": "Claude conversation interface showing a research task" },
-        { "src": "assets/images/tools/claude/2.png", "alt": "Claude enterprise admin and security controls" }
+        { "src": "assets/images/tools/claude/home-new-chat.png", "alt": "Claude desktop home screen", "caption": "Claude's desktop app home screen with personalised greeting, model selector, and quick-start prompt categories." },
+        { "src": "assets/images/tools/claude/web-research-results.png", "alt": "Claude Research results", "caption": "Completed research output with a detailed side panel citing 457 sources." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -554,8 +571,8 @@ A static directory site for curated enterprise tools. Hosted on GitHub Pages.
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/claude-code/1.png", "alt": "Claude Code running in a terminal session" },
-        { "src": "assets/images/tools/claude-code/2.png", "alt": "Claude Code performing a multi-file refactor" }
+        { "src": "assets/images/tools/claude-code/claude-code-desktop-new-session-prompt.png", "alt": "Claude Code new session prompt", "caption": "Claude Code desktop app on a blank new session ready to receive a task." },
+        { "src": "assets/images/tools/claude-code/claude-code-vscode-extension-unit-tests.png", "alt": "Claude Code writing unit tests in VS Code", "caption": "Claude Code VS Code extension writing unit tests for a localisation file." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -588,8 +605,8 @@ A static directory site for curated enterprise tools. Hosted on GitHub Pages.
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/midjourney/1.png", "alt": "Midjourney image generation interface" },
-        { "src": "assets/images/tools/midjourney/2.png", "alt": "Midjourney generated images in a gallery view" }
+        { "src": "assets/images/tools/midjourney/midjourney-create-image-actions-menu.webp", "alt": "Midjourney Create tab with image actions", "caption": "Midjourney Create tab showing a generated image with the full context menu and Creation Actions panel open." },
+        { "src": "assets/images/tools/midjourney/midjourney-explore-top-day-community-grid.webp", "alt": "Midjourney Explore community feed", "caption": "Midjourney Explore tab showing the Top Day community image feed in a masonry grid." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [
@@ -622,8 +639,8 @@ A static directory site for curated enterprise tools. Hosted on GitHub Pages.
         "instagram": ""
       },
       "screenshots": [
-        { "src": "assets/images/tools/harvey/1.png", "alt": "Harvey AI legal research interface" },
-        { "src": "assets/images/tools/harvey/2.png", "alt": "Harvey AI contract analysis workflow" }
+        { "src": "assets/images/tools/harvey/harvey-contract-review-table.png", "alt": "Harvey bulk contract review interface", "caption": "Harvey's bulk contract review interface displaying force majeure and assignment provision analysis across 20+ documents." },
+        { "src": "assets/images/tools/harvey/harvey-draft-legal-memo.png", "alt": "Harvey drafting a legal memo", "caption": "Harvey assistant drafting a legal defence memo for a securities trading platform infringement case." }
       ],
       "videoEmbedUrl": "",
       "whoUsesIt": [

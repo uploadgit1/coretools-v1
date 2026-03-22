@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Core Tools — a curated directory of the enterprise tools that matter. What they do, who uses them, and where to start." />
+  <meta name="description" content="Core Tools — a curated directory of core tools, powered by AI, that businesses are already using." />
   <title>Core Tools</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -21,7 +21,7 @@
             <span class="logo-text">Core Tools</span>
             <span class="logo-badge">AI</span>
           </a>
-          <p class="header-tagline">A curated directory of the tools that matter — what they do, who uses them, and where to start.</p>
+          <p class="header-tagline">A curated directory of core tools, powered by AI, that businesses are already using.</p>
         </div>
       </div>
     </header>
@@ -77,40 +77,64 @@
     </div>
 
     <div class="tool-page">
-      <div class="container tool-layout">
+      <div class="container">
 
-        <!-- Left: main content column -->
-        <div class="tool-main">
+        <!-- Two-column: left = info, right = gallery -->
+        <div class="tool-layout-cols">
 
-          <!-- A: Header -->
-          <section id="tool-header" aria-label="Tool overview"></section>
+          <!-- Left column: header, links, who's using it -->
+          <div class="tool-col-left">
 
-          <!-- B: Official Links -->
-          <section id="tool-links-section" aria-label="Official links">
-            <h2 class="section-label">Official Links</h2>
-            <div id="tool-links" class="tool-links"></div>
-          </section>
+            <!-- A: Header -->
+            <section id="tool-header" aria-label="Tool overview"></section>
 
-          <!-- C: Who's Using It -->
-          <section id="tool-who-section" aria-label="Who is using this tool">
-            <h2 class="section-label">Who's Using It</h2>
-            <div id="who-list" class="who-list"></div>
-          </section>
+            <!-- B: Official Links -->
+            <section id="tool-links-section" aria-label="Official links">
+              <h2 class="section-label">Official Links</h2>
+              <div id="tool-links" class="tool-links"></div>
+            </section>
 
-          <!-- D: Screenshot Gallery -->
-          <section id="tool-gallery-section" aria-label="Screenshots">
-            <h2 class="section-label">Screenshots</h2>
-            <div class="gallery">
-              <div class="gallery-main" id="gallery-main">
-                <button class="gallery-btn" id="gallery-prev" aria-label="Previous screenshot">&#8592;</button>
-                <div class="gallery-image-wrap">
-                  <img id="gallery-img" src="" alt="" class="gallery-img" />
+            <!-- C: Who's Using It -->
+            <section id="tool-who-section" aria-label="Who is using this tool">
+              <h2 class="section-label">Who's Using It</h2>
+              <div id="who-list" class="who-list"></div>
+            </section>
+
+          </div>
+          <!-- end .tool-col-left -->
+
+          <!-- Right column: gallery -->
+          <div class="tool-col-right">
+
+            <!-- D: Screenshot Gallery -->
+            <section id="tool-gallery-section" aria-label="Screenshots">
+              <h2 class="section-label">Screenshots</h2>
+              <div class="gallery">
+                <div class="gallery-main" id="gallery-main">
+                  <div class="gallery-nav-col">
+                    <span class="gallery-side-counter" id="gallery-counter-left" aria-live="polite"></span>
+                    <button class="gallery-btn" id="gallery-prev" aria-label="Previous screenshot">&#8592;</button>
+                  </div>
+                  <div class="gallery-image-wrap">
+                    <img id="gallery-img" src="" alt="" class="gallery-img" />
+                  </div>
+                  <div class="gallery-nav-col">
+                    <span class="gallery-side-counter" id="gallery-counter-right" aria-hidden="true"></span>
+                    <button class="gallery-btn" id="gallery-next" aria-label="Next screenshot">&#8594;</button>
+                  </div>
                 </div>
-                <button class="gallery-btn" id="gallery-next" aria-label="Next screenshot">&#8594;</button>
+                <p class="gallery-caption" id="gallery-caption"></p>
               </div>
-              <p class="gallery-counter" id="gallery-counter" aria-live="polite"></p>
-            </div>
-          </section>
+            </section>
+
+          </div>
+          <!-- end .tool-col-right -->
+
+        </div>
+        <!-- end .tool-layout-cols -->
+
+        <!-- Full-width bottom section: video, use cases, notes -->
+        <div class="tool-layout-bottom">
 
           <!-- E: Video -->
           <section id="tool-video-section" class="hidden" aria-label="Preview video">
@@ -141,7 +165,7 @@
           </section>
 
         </div>
-        <!-- end .tool-main -->
+        <!-- end .tool-layout-bottom -->
 
       </div>
     </div>
@@ -150,6 +174,15 @@
   <!-- end #view-tool -->
 
 
+  <!-- ============================================================
+       LIGHTBOX — hidden until an image is clicked
+  ============================================================ -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Enlarged screenshot">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close enlarged image">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="" class="lightbox-img" />
+  </div>
+
+  <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/tool.js"></script>
 
