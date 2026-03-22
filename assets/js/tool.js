@@ -22,6 +22,26 @@ function renderToolDetail(tool) {
 
   // Wire up back button (reassign each time so no stale handlers)
   document.getElementById('back-btn').onclick = () => showHomeView();
+
+  // Wire up next tool button
+  const nextToolBtn = document.getElementById('next-tool-btn');
+  const nextTool = getNextTool(tool.slug);
+  if (nextToolBtn && nextTool) {
+    nextToolBtn.textContent = `Next: ${nextTool.name} →`;
+    nextToolBtn.onclick = () => openTool(nextTool.slug);
+  }
+}
+
+// ============================================================
+// NEXT TOOL — cycles alphabetically through all tools
+// ============================================================
+function getNextTool(currentSlug) {
+  const sorted = [...allTools].sort((a, b) => a.name.localeCompare(b.name));
+  const currentIndex = sorted.findIndex(t => t.slug === currentSlug);
+  if (currentIndex === -1) return null;
+  // Wrap around: last tool goes back to first
+  const nextIndex = (currentIndex + 1) % sorted.length;
+  return sorted[nextIndex];
 }
 
 // ============================================================
