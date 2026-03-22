@@ -173,6 +173,154 @@ window.TOOLS_DATA = {
       ],
       "notes": "Harvey is purpose-built for legal — not a general AI assistant with a legal plugin. Strong traction with major global law firms.",
       "lastUpdated": "2026-03-15"
+    },
+    {
+      "slug": "higgsfield",
+      "name": "Higgsfield AI",
+      "vendor": "Higgsfield AI",
+      "category": "Design & Video",
+      "shortDescription": "AI video generation platform built for UGC-style and social content — realistic human motion, character templates, and viral-format outputs.",
+      "bestFor": "Performance marketing and social media teams that need high-converting UGC-style video ads without a film crew or professional production budget.",
+      "tags": ["video", "ugc", "social media"],
+      "officialLinks": {
+        "website": "https://higgsfield.ai",
+        "docs": "",
+        "blog": "",
+        "youtube": "",
+        "linkedin": "https://www.linkedin.com/company/higgsfield",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/higgsfield/higgsfield-ai_3-largeh.jpg",  "alt": "Higgsfield video generation interface", "caption": "Higgsfield video generation interface with model selector (Minimax, Veo3) and a row of Viral video prompt templates to choose from." },
+        { "src": "assets/images/tools/higgsfield/higgsfield-ai_1-largeh.jpg",  "alt": "Higgsfield UGC Builder template selector", "caption": "Higgsfield UGC Builder template selector showing six character motion options: General, Selfie, Selling, Podcast, Car Talking, and Mirror Selfie." },
+        { "src": "assets/images/tools/higgsfield/higgsfield-ai_2-largeh.jpg",  "alt": "Higgsfield pricing plans", "caption": "Higgsfield subscription pricing page comparing Basic ($9/mo), Pro ($29/mo), Ultimate ($49/mo), and Creator ($249/mo) plans." }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Performance marketing teams", "url": "" },
+        { "name": "Social media agencies", "url": "" }
+      ],
+      "useCases": [
+        "UGC-style video ad creation",
+        "Social media content production",
+        "Product demo videos",
+        "Influencer-style branded content"
+      ],
+      "notes": "Specialises in realistic human motion and social-first formats. Supports multiple video generation models including Minimax and Veo3. Pricing starts at $9/mo.",
+      "lastUpdated": "2026-03-22"
+    },
+    {
+      "slug": "ltx-studio",
+      "name": "LTX Studio",
+      "vendor": "Lightricks",
+      "category": "Design & Video",
+      "shortDescription": "End-to-end AI video production platform — script and storyboard through to rendered video, with image-to-video conversion and real-time team collaboration.",
+      "bestFor": "Content teams and video producers that want to take a project from brief to finished video entirely within one AI platform, without switching between tools.",
+      "tags": ["video", "production", "collaboration"],
+      "officialLinks": {
+        "website": "https://ltx.studio",
+        "docs": "",
+        "blog": "",
+        "youtube": "",
+        "linkedin": "https://www.linkedin.com/company/lightricks",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/ltx-studio/ltx-studio1.png", "alt": "LTX Studio homepage", "caption": "LTX Studio marketing homepage headlined 'The AI Platform for Video Production' with a dark cinematic background." },
+        { "src": "assets/images/tools/ltx-studio/ltx-studio2.png", "alt": "LTX Studio image-to-video interface", "caption": "LTX Studio AI Image to Video Generator showing a drag-and-drop upload interface for converting still images into video clips." },
+        { "src": "assets/images/tools/ltx-studio/ltx-studio4.png", "alt": "LTX Studio AI Movie Maker", "caption": "LTX Studio AI Movie Maker interface positioning the tool as a script-to-screen film production platform." },
+        { "src": "assets/images/tools/ltx-studio/ltx-studio5.png", "alt": "LTX Studio real-time collaboration", "caption": "LTX Studio real-time collaboration feature page showing multiple users working on a video project simultaneously." },
+        { "src": "assets/images/tools/ltx-studio/ltx-studio3.png", "alt": "LTX Studio pricing", "caption": "LTX Studio pricing page comparing Free ($0), Lite ($12/mo), Standard ($28/mo), and Pro ($100/mo) plans." }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Content production teams", "url": "" },
+        { "name": "Marketing and creative agencies", "url": "" }
+      ],
+      "useCases": [
+        "Script-to-video production",
+        "Image-to-video conversion",
+        "Collaborative video editing",
+        "Marketing and branded video content"
+      ],
+      "notes": "Built by Lightricks, the team behind Facetune and other creative apps. Real-time multi-user collaboration is a standout feature for agency and team workflows.",
+      "lastUpdated": "2026-03-22"
+    },
+    {
+      "slug": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "category": "Enterprise",
+      "shortDescription": "AI assistant embedded across the Microsoft 365 suite — drafting in Word, summarising in Teams, analysing in Excel, and writing in Outlook.",
+      "bestFor": "Enterprises already running Microsoft 365 that want AI productivity across the whole suite without adopting a separate platform or changing how their teams work.",
+      "tags": ["enterprise", "productivity", "microsoft 365"],
+      "officialLinks": {
+        "website": "https://www.microsoft.com/en-us/microsoft-365/copilot",
+        "docs": "https://learn.microsoft.com/en-us/copilot/microsoft-365/",
+        "blog": "https://www.microsoft.com/en-us/microsoft-365/blog/",
+        "youtube": "",
+        "linkedin": "",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/microsoft-copilot/copilot1.png",  "alt": "Microsoft 365 Copilot new chat", "caption": "Microsoft 365 Copilot new chat interface with a welcome prompt bar and a row of suggested conversation starters." },
+        { "src": "assets/images/tools/microsoft-copilot/copilot4.webp", "alt": "Copilot in Microsoft Word", "caption": "Copilot in Microsoft Word composing a proposal by drawing on notes from a previous meeting." },
+        { "src": "assets/images/tools/microsoft-copilot/copilot5.webp", "alt": "Copilot in Microsoft Teams", "caption": "Copilot in Microsoft Teams summarising a Marketing Brainstorm meeting in real time, listing key points and action items." },
+        { "src": "assets/images/tools/microsoft-copilot/copilot6.png",  "alt": "Copilot in Microsoft Excel", "caption": "Copilot in Microsoft Excel analysing a sales dataset and generating charts from natural-language prompts." },
+        { "src": "assets/images/tools/microsoft-copilot/copilot2.webp", "alt": "Copilot SWOT analysis", "caption": "Microsoft 365 Copilot generating a SWOT analysis table inside a Microsoft 365 document." },
+        { "src": "assets/images/tools/microsoft-copilot/copilot3.webp", "alt": "Copilot in browser with plugins", "caption": "Copilot in the browser with the plugins panel open, showing Search and Suno integrations." }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Widely deployed across enterprise Microsoft 365 tenants", "url": "" },
+        { "name": "Used by organisations in finance, professional services, and government", "url": "" }
+      ],
+      "useCases": [
+        "Meeting summaries and action items in Teams",
+        "Document and email drafting",
+        "Data analysis and chart generation in Excel",
+        "Research and synthesis across M365 content"
+      ],
+      "notes": "Requires a Microsoft 365 Business or Enterprise licence plus the Copilot add-on. Pricing is per-user/per-month on top of existing M365 costs. Works across Word, Excel, PowerPoint, Teams, Outlook, and the browser.",
+      "lastUpdated": "2026-03-22"
+    },
+    {
+      "slug": "runway",
+      "name": "Runway",
+      "vendor": "Runway AI Inc.",
+      "category": "Design & Video",
+      "shortDescription": "Professional AI video generation and editing platform. The Gen-4.5 model produces high-fidelity video from text and image prompts, with strong motion and character consistency.",
+      "bestFor": "Creative agencies, film and content studios, and brand teams that need state-of-the-art AI video output — not just quick clips, but production-quality material.",
+      "tags": ["video", "generation", "creative"],
+      "officialLinks": {
+        "website": "https://runwayml.com",
+        "docs": "https://help.runwayml.com",
+        "blog": "https://runwayml.com/blog",
+        "youtube": "https://www.youtube.com/@RunwayML",
+        "linkedin": "https://www.linkedin.com/company/runwayml",
+        "instagram": ""
+      },
+      "screenshots": [
+        { "src": "assets/images/tools/runway/runway1.png",                      "alt": "Runway Gen-4.5 homepage",              "caption": "Runway homepage introducing Gen-4.5 with a hero video preview and the tagline announcing the new model." },
+        { "src": "assets/images/tools/runway/runway5-video-gen-interface.png",  "alt": "Runway video generation interface",    "caption": "Runway video generation interface showing a text prompt alongside the rendered video output." },
+        { "src": "assets/images/tools/runway/runway3.png",                      "alt": "Runway Gen-4.5 capabilities",          "caption": "Runway Gen-4.5 capabilities page showcasing four headline features: Complex Scenes, Detailed Compositions, Physical Accuracy, and Expressive Characters." },
+        { "src": "assets/images/tools/runway/runway4.png",                      "alt": "Runway Gen-4.5 gallery",               "caption": "A gallery of AI-generated video stills produced with Runway Gen-4.5, demonstrating the model quality." },
+        { "src": "assets/images/tools/runway/runway2.png",                      "alt": "Runway Gen-4.5 announcement",          "caption": "Runway Gen-4.5 announcement page highlighting the new frontier for video generation with sample outputs." },
+        { "src": "assets/images/tools/runway/runway6ml_5-largeh.jpg",           "alt": "Runway assets library",                "caption": "Runway assets library displaying a user's Private assets folder with a grid of previously generated video clips." }
+      ],
+      "videoEmbedUrl": "",
+      "whoUsesIt": [
+        { "name": "Used by major film studios and production companies", "url": "" },
+        { "name": "Agencies and brand teams across entertainment and advertising", "url": "" }
+      ],
+      "useCases": [
+        "AI video generation from text prompts",
+        "Image-to-video conversion",
+        "Visual effects and compositing",
+        "Brand and advertising content production"
+      ],
+      "notes": "Runway Gen-4.5 is the current flagship model. Particularly strong on motion consistency and expressive character generation. Enterprise plans are available with dedicated infrastructure and team management.",
+      "lastUpdated": "2026-03-22"
     }
   ]
 };
